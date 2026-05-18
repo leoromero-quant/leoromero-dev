@@ -410,11 +410,33 @@ h2 {
 .cta-reinforcer p {
   color: var(--text-muted);
   font-size: 1.02rem;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+}
+.cta-reinforcer .cta-pair {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .cta-reinforcer .cta {
   font-size: 1rem;
   padding: 14px 28px;
+}
+.cta-reinforcer .email-cta {
+  font-family: var(--mono);
+  font-size: 1rem;
+  padding: 14px 24px;
+  border: 1px solid var(--border-hot);
+  border-radius: 10px;
+  color: var(--text);
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.cta-reinforcer .email-cta:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(0, 234, 255, 0.04);
 }
 
 /* ─────────── CONTACT ─────────── */
@@ -423,21 +445,65 @@ h2 {
   padding: 90px 0 70px;
 }
 .contact h2 { margin-bottom: 12px; }
-.contact p {
+.contact > .container > p {
   color: var(--text-muted);
   font-size: 1.05rem;
-  margin-bottom: 28px;
+  margin-bottom: 36px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.email-hero {
+  display: inline-block;
+  margin: 0 auto 14px;
+  padding: 22px 32px;
+  background: var(--surface);
+  border: 1px solid var(--border-hot);
+  border-radius: 14px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.email-hero:hover {
+  border-color: var(--cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 4px rgba(0, 234, 255, 0.10), 0 12px 32px rgba(0, 234, 255, 0.14);
+}
+.email-hero .email-address {
+  font-family: var(--mono);
+  font-size: clamp(1.15rem, 3vw, 1.65rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: block;
+}
+.email-hero .email-caption {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+.contact-other {
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 32px 0 16px;
 }
 .contact-links {
-  display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
 }
 .contact-links a {
   font-family: var(--mono);
-  font-size: 0.95rem;
-  padding: 10px 18px;
-  border: 1px solid var(--border-hot);
+  font-size: 0.9rem;
+  padding: 9px 16px;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  color: var(--text);
+  color: var(--text-muted);
 }
 .contact-links a:hover { border-color: var(--cyan); color: var(--cyan); }
 
@@ -644,8 +710,11 @@ footer {
     </div>
 
     <div class="cta-reinforcer">
-      <p>Want to share my profile with the hiring team?</p>
-      <a href="/cv/leonardo-suarez-romero-cv.pdf" target="_blank" rel="noopener" class="cta cta-primary" download>Download CV (PDF) →</a>
+      <p>Forward my profile to the hiring team, or reach me directly.</p>
+      <div class="cta-pair">
+        <a href="/cv/leonardo-suarez-romero-cv.pdf" target="_blank" rel="noopener" class="cta cta-primary" download>Download CV (PDF) →</a>
+        <a href="mailto:leonardosuarezromero@gmail.com" class="email-cta">leonardosuarezromero@gmail.com →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -653,12 +722,18 @@ footer {
 <section class="contact" id="contact">
   <div class="container">
     <p class="eyebrow">Contact</p>
-    <h2>Open to remote roles in the U.S.</h2>
+    <h2>The fastest way to reach me is email</h2>
     <p>Quantitative research, options pricing, risk modeling, AI-agent applications. Mexico-based with a U.S. LLC ready for contractor onboarding.</p>
+
+    <a href="mailto:leonardosuarezromero@gmail.com" class="email-hero">
+      <span class="email-address">leonardosuarezromero@gmail.com</span>
+      <span class="email-caption">click to email · or copy</span>
+    </a>
+
+    <p class="contact-other">Elsewhere on the web</p>
     <div class="contact-links">
-      <a href="mailto:leonardosuarezromero@gmail.com">email</a>
-      <a href="https://linkedin.com/in/leonardo-suarez-romero" target="_blank" rel="noopener">linkedin</a>
-      <a href="https://github.com/leoromero-quant" target="_blank" rel="noopener">github</a>
+      <a href="https://linkedin.com/in/leonardo-suarez-romero" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/leoromero-quant" target="_blank" rel="noopener">GitHub</a>
       <a href="https://prob-edge.com" target="_blank" rel="noopener">prob-edge.com</a>
     </div>
   </div>
