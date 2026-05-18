@@ -279,9 +279,9 @@ h2 {
   list-style: none;
 }
 .writing-list li {
-  padding: 16px 0;
+  padding: 22px 0;
   border-bottom: 1px solid var(--border);
-  display: flex; flex-direction: column; gap: 4px;
+  display: flex; flex-direction: column; gap: 8px;
 }
 .writing-list li:last-child { border-bottom: none; }
 .writing-list .meta {
@@ -290,12 +290,19 @@ h2 {
   font-size: 0.8rem;
   letter-spacing: 0.02em;
 }
-.writing-list a {
-  font-size: 1.05rem;
-  font-weight: 500;
+.writing-list .title-link {
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--text);
+  line-height: 1.45;
 }
-.writing-list a:hover { color: var(--cyan); }
+.writing-list .title-link:hover { color: var(--cyan); }
+.writing-list .teaser {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 2px;
+}
 
 /* ─────────── CONTACT ─────────── */
 .contact {
@@ -445,12 +452,14 @@ footer {
     <h2>Selected pieces</h2>
     <ul class="writing-list">
       <li>
-        <span class="meta">2026 &middot; LinkedIn</span>
-        <a href="https://www.linkedin.com/pulse/when-wall-street-gets-its-own-ai-platform-analysts-anthropic-romero-nthge/" target="_blank" rel="noopener">When Wall Street Gets Its Own AI Platform: Analysts, Anthropic, and the New Equity Research Stack</a>
+        <span class="meta">May 11, 2026 &middot; LinkedIn</span>
+        <a href="https://www.linkedin.com/pulse/when-wall-street-gets-its-own-ai-platform-analysts-anthropic-romero-nthge/" target="_blank" rel="noopener" class="title-link">When Wall Street Gets Its Own AI Platform</a>
+        <p class="teaser">A quantitative analyst's perspective on the Anthropic threat to the financial services sector. On the May 5 launch of Claude agents for institutional finance, the two-tier market it creates, and why data-handling judgment is the durable moat for independent analysts.</p>
       </li>
       <li>
         <span class="meta">2019 &middot; PhD dissertation &middot; Universidad de Guadalajara</span>
-        <a href="#">The Inverted Yield Curve and Its Effects on Capital Markets: A Spectral Analysis of a VAR Cointegration Model by S&amp;P Sector</a>
+        <a href="#" class="title-link">The Inverted Yield Curve and Its Effects on Capital Markets: A Spectral Analysis of a VAR Cointegration Model by S&amp;P Sector</a>
+        <p class="teaser">Frequency-domain spectral decomposition of macro shocks combined with VAR cointegration to recover the long-run causal structure between macroeconomic shocks and sector-level S&amp;P returns.</p>
       </li>
     </ul>
   </div>
