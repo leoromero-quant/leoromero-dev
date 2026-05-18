@@ -5,10 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leonardo Suárez Romero, PhD · Quantitative Data Analyst</title>
 <meta name="description" content="PhD economist and quantitative researcher. Fifteen years across Reuters Latin America, Universidad Panamericana, and independent options strategy practice. Builder of Prob-Edge, Smart-Beta, and PaPs Mercados.">
+<meta name="theme-color" content="#050810">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Open Graph -->
 <meta property="og:title" content="Leonardo Suárez Romero, PhD · Quantitative Data Analyst">
-<meta property="og:description" content="Quantitative researcher at the intersection of options pricing, fixed income, and macro factor analysis.">
+<meta property="og:description" content="Quantitative researcher at the intersection of options pricing, fixed income, and macro factor analysis. Builder of Prob-Edge, PaPs Mercados, and Smart-Beta.">
 <meta property="og:url" content="https://leoromero.dev">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://leoromero.dev/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Leonardo Suárez Romero, PhD — Quantitative Data Analyst">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leonardo Suárez Romero, PhD · Quantitative Data Analyst">
+<meta name="twitter:description" content="Quantitative researcher at the intersection of options pricing, fixed income, and macro factor analysis.">
+<meta name="twitter:image" content="https://leoromero.dev/og-image.png">
 <style>
 /* ─────────── TOKENS (compatible with prob-edge.com) ─────────── */
 :root {
@@ -304,6 +322,45 @@ h2 {
   margin-top: 2px;
 }
 
+/* ─────────── ENGAGEMENT ─────────── */
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 8px;
+}
+.engagement-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+.engagement-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.engagement-card h3 .pill {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: rgba(0, 255, 157, 0.08);
+  border: 1px solid rgba(0, 255, 157, 0.25);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.engagement-card p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
 /* ─────────── CONTACT ─────────── */
 .contact {
   text-align: center;
@@ -350,6 +407,7 @@ footer {
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#writing">Writing</a>
+      <a href="#engagement">Hire</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -365,6 +423,7 @@ footer {
     <div class="cta-row">
       <a href="#projects" class="cta cta-primary">See the work →</a>
       <a href="https://risk-neutral-density-probabilities-3.onrender.com/" target="_blank" rel="noopener" class="cta cta-ghost">Live demo · Prob-Edge</a>
+      <a href="/cv/leonardo-suarez-romero-cv.pdf" target="_blank" rel="noopener" class="cta cta-ghost" download>Download CV (PDF)</a>
     </div>
   </div>
 </header>
@@ -462,6 +521,34 @@ footer {
         <p class="teaser">Frequency-domain spectral decomposition of macro shocks combined with VAR cointegration to recover the long-run causal structure between macroeconomic shocks and sector-level S&amp;P returns.</p>
       </li>
     </ul>
+  </div>
+</section>
+
+<section class="block" id="engagement">
+  <div class="container">
+    <p class="eyebrow">How to hire me</p>
+    <h2>Three clean engagement models, all ready today</h2>
+    <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 28px; max-width: 760px;">
+      I am Mexico-based and operate a U.S. limited liability company with active EIN and U.S. business banking. That removes most of the operational friction in hiring a non-U.S. resident, and gives both sides a clean choice of contract shape.
+    </p>
+    <div class="engagement-grid">
+
+      <div class="engagement-card">
+        <h3>1099 contractor <span class="pill">Fastest</span></h3>
+        <p>Invoice through my U.S. LLC against a contractor agreement. No visa work required. Start within a week. Suitable for project-scoped engagements, fractional work, or extended trial-to-hire arrangements.</p>
+      </div>
+
+      <div class="engagement-card">
+        <h3>W-2 with TN visa sponsorship</h3>
+        <p>As a Mexican PhD economist, I qualify for TN visa sponsorship for U.S. quantitative analyst roles. Cleaner than H-1B (no lottery, faster processing) and a natural fit for the role categories on most Workday and Greenhouse forms.</p>
+      </div>
+
+      <div class="engagement-card">
+        <h3>Employer of Record</h3>
+        <p>For firms that prefer not to set up a Mexican entity but want a full-employee structure, third-party EOR providers (Deel, Remote.com, Oyster, Velocity Global) cover the legal and payroll layer. I have onboarded under this model before.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
