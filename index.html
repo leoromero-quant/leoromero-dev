@@ -162,10 +162,54 @@ h2 {
   letter-spacing: -0.02em;
   margin-bottom: 24px;
 }
+.about-wrap {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .about-wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    justify-items: center;
+    text-align: left;
+  }
+}
+.profile-photo-link {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--border-hot);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  position: sticky;
+  top: 100px;
+}
+.profile-photo-link:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 4px rgba(0, 234, 255, 0.12), 0 8px 32px rgba(0, 234, 255, 0.18);
+  transform: translateY(-2px);
+}
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 820px) {
+  .profile-photo-link {
+    width: 160px;
+    height: 160px;
+    position: static;
+  }
+}
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  margin-top: 20px;
 }
 @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; gap: 24px; } }
 .about-grid p {
@@ -321,26 +365,33 @@ footer {
 <section class="block" id="about">
   <div class="container">
     <p class="eyebrow">About</p>
-    <h2>Fifteen years between data infrastructure, the classroom, and the live market</h2>
-    <div class="about-grid">
+    <div class="about-wrap">
+      <a href="https://linkedin.com/in/leonardo-suarez-romero" target="_blank" rel="noopener" class="profile-photo-link" aria-label="Leonardo Su&aacute;rez Romero on LinkedIn">
+        <img src="img/leonardo.jpg" alt="Leonardo Su&aacute;rez Romero" class="profile-photo">
+      </a>
       <div>
-        <p>
-          I am a <strong>PhD economist</strong> from Universidad de Guadalajara (2019). My dissertation, <em>The Inverted Yield Curve and Its Effects on Capital Markets: A Spectral Analysis of a VAR Cointegration Model by S&amp;P Sector</em>, applied frequency-domain spectral decomposition of macro shocks combined with vector autoregression cointegration to recover the long-run causal structure between macro and sector-level returns.
-        </p>
-        <p>
-          From <strong>2004 to 2012</strong> I owned real-time market data infrastructure at <strong>Thomson Reuters Latin America</strong>, covering more than three thousand five hundred instruments across equities, sovereign bonds, FX, and macro indicators, with throughput of tens to hundreds of millions of daily tick events under uptime above 99.9 percent. Eleven months in 2009 I was embedded with the Reuters fixed-income analytics team in New York during the post-Lehman crisis.
-        </p>
-      </div>
-      <div>
-        <p>
-          From <strong>March 2020 to December 2025</strong> I was full-time professor of finance at <strong>Universidad Panamericana School of Business</strong>, teaching Risk Management, Derivatives, and Quantitative Finance across three campuses.
-        </p>
-        <p>
-          Across that period I have run a personal equity options book of more than <strong>USD 5 million AUM</strong> for over twelve years using systematic premium-selling discipline across SPX, QQQ, GLD, and single names. I hold the Mexican AMIB Figura 3 derivatives license and the tastytrade Options &amp; Derivatives certificate.
-        </p>
-        <p>
-          Since concluding the professorship in December 2025, I have been building open-source production stack at the intersection of derivatives pricing, factor analysis, and AI-assisted analytics.
-        </p>
+        <h2>Fifteen years between data infrastructure, the classroom, and the live market</h2>
+        <div class="about-grid">
+          <div>
+            <p>
+              I am a <strong>PhD economist</strong> from Universidad de Guadalajara (2019). My dissertation, <em>The Inverted Yield Curve and Its Effects on Capital Markets: A Spectral Analysis of a VAR Cointegration Model by S&amp;P Sector</em>, applied frequency-domain spectral decomposition of macro shocks combined with vector autoregression cointegration to recover the long-run causal structure between macro and sector-level returns.
+            </p>
+            <p>
+              From <strong>2004 to 2012</strong> I owned real-time market data infrastructure at <strong>Thomson Reuters Latin America</strong>, covering more than three thousand five hundred instruments across equities, sovereign bonds, FX, and macro indicators, with throughput of tens to hundreds of millions of daily tick events under uptime above 99.9 percent. Eleven months in 2009 I was embedded with the Reuters fixed-income analytics team in New York during the post-Lehman crisis.
+            </p>
+          </div>
+          <div>
+            <p>
+              From <strong>March 2020 to December 2025</strong> I was full-time professor of finance at <strong>Universidad Panamericana School of Business</strong>, teaching Risk Management, Derivatives, and Quantitative Finance across three campuses.
+            </p>
+            <p>
+              Across that period I have run a personal equity options book of more than <strong>USD 5 million AUM</strong> for over twelve years using systematic premium-selling discipline across SPX, QQQ, GLD, and single names. I hold the Mexican AMIB Figura 3 derivatives license and the tastytrade Options &amp; Derivatives certificate.
+            </p>
+            <p>
+              Since concluding the professorship in December 2025, I have been building open-source production stack at the intersection of derivatives pricing, factor analysis, and AI-assisted analytics.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
